@@ -1,6 +1,7 @@
 import LightRays from "@/components/LightRays";
 import ExploreBtn from "@/components/ExploreBtn";
-
+import EventLearnMoreBtn from "@/components/EventLearnMoreBtn";
+import Image from 'next/image';
 
 const Page = () => {
   return (
@@ -30,7 +31,33 @@ const Page = () => {
           Hackathons, Meetups, and Conferences, All in One Place
         </p>
         <ExploreBtn />
+
+        <div className="mt-20 space-y-7">
+          <h3>Featured Events</h3>
+
+          <ul className="events">
+            {[1, 2, 3, 4, 5].map((event) => (
+              <li key={event} className="event-card">
+                <div className="event-image">
+                  <img
+                    src={`/images/event${event}.png`}
+                    alt={`Event ${event}`}
+                  />
+                </div>
+                <div className="event-details">
+                  <h4>Event {event}</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                  <EventLearnMoreBtn eventId={event} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </main>
+
 
     </section>
   );
