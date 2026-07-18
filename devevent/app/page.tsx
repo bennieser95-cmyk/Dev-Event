@@ -1,5 +1,6 @@
 import LightRays from "@/components/LightRays";
 import ExploreBtn from "@/components/ExploreBtn";
+import EventLearnMoreBtn from "@/components/EventLearnMoreBtn";
 import Image from 'next/image';
 
 const Page = () => {
@@ -49,7 +50,7 @@ const Page = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
-                  <button className="event-button">Learn More</button>
+                  <EventLearnMoreBtn eventId={event} />
                 </div>
               </li>
             ))}
